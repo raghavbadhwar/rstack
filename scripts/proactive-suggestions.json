@@ -3,6 +3,11 @@
   "catalog_mode": "trim",
   "note": "Routing / voice-trigger prose extracted from SKILL.md frontmatter descriptions during catalog trim. Loaded on demand when routing guidance is needed.",
   "skills": {
+    "agent-reach": {
+      "lead": "Route gstack internet research across search, GitHub, social, video, web, RSS, career, and market platforms.",
+      "routing": "Uses Agent Reach's live backend diagnosis before\nchoosing a platform tool. Read-only unless the user explicitly authorizes a\nwrite or account change.",
+      "voice_line": null
+    },
     "autoplan": {
       "lead": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles.",
       "routing": "Surfaces\ntaste decisions (close approaches, borderline scope, codex disagreements) at a final\napproval gate. One command, fully reviewed plan out.\nUse when asked to \"auto review\", \"autoplan\", \"run all reviews\", \"review this plan\nautomatically\", or \"make the decisions for me\".\nProactively suggest when the user has a plan file and wants to run the full review\ngauntlet without answering 15-30 intermediate questions.",
@@ -231,6 +236,11 @@
     "scrape": {
       "lead": "Pull data from a web page.",
       "routing": "First call on a new intent prototypes the flow\nvia $B primitives and returns JSON. Subsequent calls on a matching intent\nroute to a codified browser-skill and return in ~200ms. Read-only — for\nmutating flows (form fills, clicks, submissions), use /automate.\nUse when asked to \"scrape\", \"get data from\", \"pull\", \"extract from\", or\n\"what's on\" a page.",
+      "voice_line": null
+    },
+    "scrapling": {
+      "lead": "Use Scrapling from gstack for bounded public-web extraction with static, browser-rendered, or authorized stealth fetches.",
+      "routing": "Escalates only after a\nconcrete failure and sanitizes every CLI result for AI consumption.",
       "voice_line": null
     },
     "setup-browser-cookies": {

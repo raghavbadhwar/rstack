@@ -175,6 +175,8 @@ export const SKILL_COVERAGE: Record<string, SkillCoverage> = {
   'open-gstack-browser': { gate: ['test/skill-coverage-floor.test.ts'], periodic: [] },
   'pair-agent': { gate: ['test/skill-coverage-floor.test.ts'], periodic: [] },
   scrape: { gate: ['test/skill-coverage-floor.test.ts'], periodic: [] },
+  scrapling: { gate: ['test/external-web-skills.test.ts', 'test/skill-coverage-floor.test.ts'], periodic: [] },
+  'agent-reach': { gate: ['test/external-web-skills.test.ts', 'test/skill-coverage-floor.test.ts'], periodic: [] },
   skillify: { gate: ['test/skill-e2e-skillify.test.ts', 'test/skill-coverage-floor.test.ts'], periodic: [] },
   learn: { gate: ['test/skill-e2e-learnings.test.ts', 'test/skill-coverage-floor.test.ts'], periodic: [] },
   'plan-tune': { gate: ['test/skill-e2e-plan-tune.test.ts', 'test/skill-coverage-floor.test.ts'], periodic: [] },

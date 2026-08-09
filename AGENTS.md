@@ -37,6 +37,8 @@ Invoke them by name (e.g., `/office-hours`).
 | `/qa` | Open a real browser, find bugs, fix them, re-verify. |
 | `/qa-only` | Same methodology as /qa but report only — no code changes. |
 | `/scrape` | Pull data from a web page. First call prototypes; codified call runs in ~200ms. |
+| `/scrapling` | Bounded public-web extraction with static, browser-rendered, or authorized stealth fetches. |
+| `/agent-reach` | Route internet research to the currently working search, social, video, web, RSS, career, or market backend. |
 | `/skillify` | Codify the most recent successful `/scrape` flow into a permanent browser-skill. |
 
 ### Release + deploy
