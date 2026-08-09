@@ -1,4 +1,4 @@
-# Contributing to gstack
+# Contributing to RStack
 
 Thanks for wanting to make gstack better. Whether you're fixing a typo in a skill prompt or building an entirely new workflow, this guide will get you up and running fast.
 
@@ -9,7 +9,7 @@ gstack skills are Markdown files that Claude Code discovers from a `skills/` dir
 That's what dev mode does. It symlinks your repo into the local `.claude/skills/` directory so Claude Code reads skills straight from your checkout.
 
 ```bash
-git clone https://github.com/garrytan/gstack.git && cd gstack
+git clone https://github.com/raghavbadhwar/rstack.git && cd rstack
 bun install                    # install dependencies
 bin/dev-setup                  # activate dev mode
 ```

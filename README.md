@@ -1,36 +1,15 @@
-# gstack
+# RStack
 
-> **Raghav Stack edition:** a complete downstream of
-> [`garrytan/gstack@94993f7`](https://github.com/garrytan/gstack/tree/94993f74012782fd94416dd44b8314f6363a13a4),
-> preserving its history, MIT license, and attribution, with `/scrapling` and
-> `/agent-reach` added. Install this edition from
+> **Raghav's agentic engineering stack.** Install it from
 > `https://github.com/raghavbadhwar/rstack`.
 
-> "I don't think I've typed like a line of code probably since December, basically, which is an extremely large change." — [Andrej Karpathy](https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/), No Priors podcast, March 2026
+I'm Raghav. I maintain RStack for the way I want AI-assisted work to run: understand the real problem, reuse proven tools before writing new code, keep agents inside explicit authority, test observable behavior, and ship evidence instead of claims.
 
-When I heard Karpathy say this, I wanted to find out how. How does one person ship like a team of twenty? Peter Steinberger built [OpenClaw](https://github.com/openclaw/openclaw) — 247K GitHub stars — essentially solo with AI agents. The revolution is here. A single builder with the right tooling can move faster than a traditional team.
+RStack turns AI coding agents into a coordinated product and engineering system. It brings product strategy, architecture review, design, implementation, browser work, research, QA, security, release, and learning workflows into one stack. This edition also adds `/scrapling` for bounded public-web extraction and `/agent-reach` for routing internet research through working backends.
 
-I'm [Garry Tan](https://x.com/garrytan), President & CEO of [Y Combinator](https://www.ycombinator.com/). I've worked with thousands of startups — Coinbase, Instacart, Rippling — when they were one or two people in a garage. Before YC, I was one of the first eng/PM/designers at Palantir, cofounded Posterous (sold to Twitter), and built Bookface, YC's internal social network.
+The goal is simple: help one focused builder operate with the discipline of a strong team without losing judgment, safety, or ownership.
 
-**gstack is my answer.** I've been building products for twenty years, and right now I'm shipping more products than I ever have. In the last 60 days: 3 production services, 40+ shipped features, part-time, while running YC full-time. On logical code change — not raw LOC, which AI inflates — my 2026 run rate is **~810× my 2013 pace** (11,417 vs 14 logical lines/day). Year-to-date (through April 18), 2026 has already produced **240× the entire 2013 year**. Measured across 40 public + private `garrytan/*` repos including Bookface, after excluding one demo repo. AI wrote most of it. The point isn't who typed it, it's what shipped.
-
-> The LOC critics aren't wrong that raw line counts inflate with AI. They are wrong that normalized-for-inflation, I'm less productive. I'm more productive, by a lot. Full methodology, caveats, and reproduction script: **[On the LOC Controversy](docs/ON_THE_LOC_CONTROVERSY.md)**.
-
-**2026 — 1,237 contributions and counting:**
-
-![GitHub contributions 2026 — 1,237 contributions, massive acceleration in Jan-Mar](docs/images/github-2026.png)
-
-**2013 — when I built Bookface at YC (772 contributions):**
-
-![GitHub contributions 2013 — 772 contributions building Bookface at YC](docs/images/github-2013.png)
-
-Same person. Different era. The difference is the tooling.
-
-**gstack is how I do it.** It turns Claude Code into a virtual engineering team — a CEO who rethinks the product, an eng manager who locks architecture, a designer who catches AI slop, a reviewer who finds production bugs, a QA lead who opens a real browser, a security officer who runs OWASP + STRIDE audits, and a release engineer who ships the PR. Twenty-three specialists and eight power tools, all slash commands, all Markdown, all free, MIT license.
-
-This is my open source software factory. I use it every day. I'm sharing it because these tools should be available to everyone.
-
-Fork it. Improve it. Make it yours. And if you want to hate on free open source software — you're welcome to, but I'd rather you just try it first.
+This is the stack I am shaping around how I build. Fork it, improve it, and make it fit the way you work.
 
 **Who this is for:**
 - **Founders and CEOs** — especially technical ones who still want to ship
@@ -184,7 +163,7 @@ Each skill feeds into the next. `/office-hours` writes a design doc that `/plan-
 
 | Skill | Your specialist | What they do |
 |-------|----------------|--------------|
-| `/office-hours` | **YC Office Hours** | Start here. Six forcing questions that reframe your product before you write code. Pushes back on your framing, challenges premises, generates implementation alternatives. Design doc feeds into every downstream skill. |
+| `/office-hours` | **RStack Office Hours** | Start here. Six forcing questions that reframe your product before you write code. Pushes back on your framing, challenges premises, generates implementation alternatives. Design doc feeds into every downstream skill. |
 | `/plan-ceo-review` | **CEO / Founder** | Rethink the problem. Find the 10-star product hiding inside the request. Four modes: Expansion, Selective Expansion, Hold Scope, Reduction. |
 | `/plan-eng-review` | **Eng Manager** | Lock in architecture, data flow, diagrams, edge cases, and tests. Forces hidden assumptions into the open. |
 | `/plan-design-review` | **Senior Designer** | Rates each design dimension 0-10, explains what a 10 looks like, then edits the plan to get there. AI Slop detection. Interactive — one AskUserQuestion per design choice. |
@@ -388,17 +367,11 @@ The uninstall script does not edit CLAUDE.md. In each project where gstack was a
 
 ---
 
-Free, MIT licensed, open source. No premium tier, no waitlist.
-
-I open sourced how I build software. You can fork it and make it your own.
-
-> **We're hiring.** Want to ship real products at AI-coding speed and help harden gstack?
-> Come work at YC — [ycombinator.com/software](https://ycombinator.com/software)
-> Extremely competitive salary and equity. San Francisco, Dogpatch District.
+Free, MIT licensed, and open source. RStack is maintained by Raghav as an independent agentic engineering system. You can fork it and make it your own.
 
 ## GBrain — persistent knowledge for your coding agent
 
-[GBrain](https://github.com/garrytan/gbrain) is a persistent knowledge base for AI agents — think of it as the memory your agent actually keeps between sessions. GStack gives you a one-command path from zero to "it's running, my agent can call it."
+GBrain is a persistent knowledge base for AI agents — think of it as the memory your agent actually keeps between sessions. RStack gives you a one-command path from zero to "it's running, my agent can call it."
 
 ```bash
 /setup-gbrain

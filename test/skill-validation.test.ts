@@ -665,9 +665,11 @@ describe('office-hours skill structure', () => {
     expect(content).toContain('Intrapreneurship');
   });
 
-  // YC founder discovery engine
-  test('contains YC apply CTA with ref tracking', () => {
-    expect(content).toContain('ycombinator.com/apply?ref=gstack');
+  test('contains Raghav builder note without YC promotion', () => {
+    expect(content).toContain("Raghav's Builder Note");
+    expect(content).toContain('Build the smallest version that can teach you something real. — Raghav');
+    expect(content).not.toContain('ycombinator.com/apply');
+    expect(content).not.toContain('Garry Tan, the creator of GStack');
   });
 
   test('contains "What I noticed" design doc section', () => {
@@ -678,18 +680,16 @@ describe('office-hours skill structure', () => {
     expect(content).toContain('golden age');
   });
 
-  test('contains Garry Tan personal plea', () => {
-    expect(content).toContain('Garry Tan, the creator of GStack');
+  test('requires an evidence-grounded personal note', () => {
+    expect(content).toContain('do not use generic praise or invent biography');
   });
 
   test('contains founder signal synthesis phase', () => {
     expect(content).toContain('Founder Signal Synthesis');
   });
 
-  test('contains three-tier decision rubric', () => {
-    expect(content).toContain('Top tier');
-    expect(content).toContain('Middle tier');
-    expect(content).toContain('Base tier');
+  test('routes directly to next-skill recommendations', () => {
+    expect(content).toContain('Then proceed to next-skill recommendations below.');
   });
 
   test('contains anti-slop examples', () => {

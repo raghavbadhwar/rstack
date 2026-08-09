@@ -99,8 +99,8 @@ EOF
 )"
 ```
 
-**Only extract real names** — actual person names (e.g. "Garry Tan") and
-company/organization names (e.g. "Y Combinator"). Skip product names,
+**Only extract real names** — actual person names (e.g. "Raghav") and
+company/organization names (e.g. "Acme Labs"). Skip product names,
 feature names, section headings, technical terms (CSS class names,
 function names), and file paths. When in doubt, skip.
 

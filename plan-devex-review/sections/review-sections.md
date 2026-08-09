@@ -95,7 +95,7 @@ in one terminal session without leaving the terminal?
 Rate 0-10: Is the interface intuitive, consistent, and complete?
 
 **Evidence recall:** Does the API surface match [persona from 0A]'s mental model?
-A YC founder expects `tool.do(thing)`. A platform engineer expects
+A startup founder expects `tool.do(thing)`. A platform engineer expects
 `tool.configure(options).execute(thing)`.
 
 Load reference: Read the "## Pass 2" section from `~/.claude/skills/gstack/plan-devex-review/dx-hall-of-fame.md`.
@@ -144,7 +144,7 @@ Also evaluate:
 Rate 0-10: Can a developer find what they need and learn by doing?
 
 **Evidence recall:** Does the docs architecture match [persona from 0A]'s learning
-style? A YC founder needs copy-paste examples front and center. A platform engineer
+style? A startup founder needs copy-paste examples front and center. A platform engineer
 needs architecture docs and API reference.
 
 Load reference: Read the "## Pass 4" section from `~/.claude/skills/gstack/plan-devex-review/dx-hall-of-fame.md`.
@@ -864,4 +864,3 @@ Outside voice| Recommended      | Recommended        | Skip
 * One sentence max per option.
 * After each pass, pause and wait for feedback before moving on.
 * Rate before and after each pass for scannability.
-

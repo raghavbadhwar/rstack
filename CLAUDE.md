@@ -124,7 +124,7 @@ gstack/
 ├── canary/          # /canary skill (post-deploy monitoring loop)
 ├── codex/           # /codex skill (multi-AI second opinion via OpenAI Codex CLI)
 ├── land-and-deploy/ # /land-and-deploy skill (merge → deploy → canary verify)
-├── office-hours/    # /office-hours skill (YC Office Hours — startup diagnostic + builder brainstorm)
+├── office-hours/    # /office-hours skill (RStack Office Hours — startup diagnostic + builder brainstorm)
 ├── investigate/     # /investigate skill (systematic root-cause debugging)
 ├── spec/            # /spec skill (five-phase spec → GitHub issue, optional agent spawn, /ship auto-closes)
 ├── retro/           # Retrospective skill (includes /retro global cross-project mode)
@@ -353,7 +353,7 @@ every `git pull`.
 compiled browse binary. `@huggingface/transformers` v4 requires `onnxruntime-node`
 which fails to `dlopen` from Bun compile's temp extract dir. Only `security.ts`
 (pure-string operations — canary, verdict combiner, attack log, status) is safe
-for `server.ts`. See `~/.gstack/projects/garrytan-gstack/ceo-plans/2026-04-19-prompt-injection-guard.md`
+for `server.ts`. See `~/.gstack/projects/raghavbadhwar-rstack/ceo-plans/2026-04-19-prompt-injection-guard.md`
 §"Pre-Impl Gate 1 Outcome" for full architectural decision.
 
 **Thresholds** (in `security.ts`):
@@ -546,50 +546,23 @@ Accept findings where the "sloppy" pattern is the correct engineering choice.
 ## Community PR guardrails
 
 When reviewing or merging community PRs, **always AskUserQuestion** before accepting
-any commit that:
+a commit that:
 
-1. **Touches ETHOS.md** — this file is Garry's personal builder philosophy. No edits
-   from external contributors or AI agents, period.
-2. **Removes or softens promotional material** — YC references, founder perspective,
-   and product voice are intentional. PRs that frame these as "unnecessary" or
-   "too promotional" must be rejected.
-3. **Changes Garry's voice** — the tone, humor, directness, and perspective in skill
-   templates, CHANGELOG, and docs are not generic. PRs that rewrite voice to be
-   more "neutral" or "professional" must be rejected.
+1. Changes `ETHOS.md` or RStack's stated builder principles.
+2. Weakens safety, authority, privacy, provenance, or verification boundaries.
+3. Adds biography, affiliations, achievements, customers, metrics, or production claims
+   that are not supported by repository evidence.
 
-Even if the agent strongly believes a change improves the project, these three
-categories require explicit user approval via AskUserQuestion. No exceptions.
-No auto-merging. No "I'll just clean this up."
+RStack's public voice belongs to Raghav: direct, practical, evidence-led, and free of
+invented status claims. Preserve upstream copyright in `LICENSE` and Git history.
 
-## Checking out PRs from garrytan-agents
+## Checking out PRs from forks
 
-When the user says "check out <PR link>" and the PR is from `garrytan-agents/gstack`
-(or any other fork that is NOT a collaborator on `garrytan/gstack`), do NOT just
-`gh pr checkout`. Fork PRs don't receive base-repo secrets (`ANTHROPIC_API_KEY`,
-`OPENAI_API_KEY`, etc.), so the eval/E2E CI jobs fail with empty-env auth errors
-regardless of what's set on the base repo.
+Fork PRs do not receive base-repository secrets. Never move an untrusted fork branch
+into the base repository merely to expose credentials. Run non-secret checks first;
+if a secret-backed evaluation is genuinely required, ask the user for explicit
+approval and use the narrowest protected workflow available.
 
-**Workflow:** push the branch to `garrytan/gstack` (the base repo) and re-target
-the PR from there.
-
-Concretely, after `gh pr checkout <N>`:
-
-1. Note the original PR number and head branch name.
-2. Push the same branch to the base repo: `git push origin HEAD:<branch-name>`
-   (origin = `garrytan/gstack`, since the worktree is set up with that remote).
-3. Close the fork PR (`gh pr close <N> --comment "moving to base-repo branch for secret access"`).
-4. Open a new PR from the base-repo branch: `gh pr create --base main --head <branch-name>`.
-5. New PR's workflows will get secrets automatically.
-
-Why not fix it on the fork side? `garrytan-agents` isn't a collaborator on
-`garrytan/gstack`. Adding it as a collaborator (option A) or flipping the
-repo-wide "send secrets to fork PRs" toggle (option B) would let secrets reach
-fork PRs from anyone — broader blast radius than just moving this one branch.
-Option C (this section) keeps secret-distribution scope tight.
-
-If the user asks you to skip the move (e.g., "just leave it as a fork PR"),
-respect that — eval CI will fail with empty-env auth, but check-freshness,
-workflow-lint, and windows-tests will still pass on the fork PR.
 
 ## CHANGELOG + VERSION style
 
@@ -726,7 +699,7 @@ the branch's history. When real work lands, the entry will replace this at /ship
 ### Release-summary format (every `## [X.Y.Z]` entry)
 
 Every version entry in `CHANGELOG.md` MUST start with a release-summary section in
-the GStack/Garry voice, one viewport's worth of prose + tables that lands like a
+the RStack/Raghav voice, one viewport's worth of prose + tables that lands like a
 verdict, not marketing. The itemized changelog (subsections, bullets, files) goes
 BELOW that summary, separated by a `### Itemized changes` header.
 

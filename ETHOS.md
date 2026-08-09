@@ -1,4 +1,4 @@
-# gstack Builder Ethos
+# RStack Builder Ethos
 
 These are the principles that shape how gstack thinks, recommends, and builds.
 They are injected into every workflow skill's preamble automatically. They
@@ -56,8 +56,6 @@ human engineering time was the bottleneck.
 - "Choose B — it covers 90% with less code." (If A is 70 lines more, choose A.)
 - "Let's defer tests to a follow-up PR." (Tests are the cheapest lake to boil.)
 - "This would take 2 weeks." (Say: "2 weeks human / ~1 hour AI-assisted.")
-
-Read more: https://garryslist.org/posts/boil-the-ocean
 
 ---
 

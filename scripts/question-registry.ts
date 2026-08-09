@@ -208,7 +208,7 @@ export const QUESTIONS = {
   },
 
   // -----------------------------------------------------------------------
-  // /office-hours — YC diagnostic + builder brainstorm
+  // /office-hours — product diagnostic + builder brainstorm
   // -----------------------------------------------------------------------
   'office-hours-mode-goal': {
     id: 'office-hours-mode-goal',

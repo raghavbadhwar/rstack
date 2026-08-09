@@ -13,10 +13,10 @@
 #   gstack-artifacts-url --owner-repo <any-url>    # extract owner/repo
 #
 # Inputs accepted:
-#   https://github.com/garrytan/gstack-artifacts-garrytan
-#   https://github.com/garrytan/gstack-artifacts-garrytan.git
-#   git@github.com:garrytan/gstack-artifacts-garrytan.git
-#   ssh://git@gitlab.com/garrytan/gstack-artifacts-garrytan.git
+#   https://github.com/raghavbadhwar/rstack-artifacts-raghav
+#   https://github.com/raghavbadhwar/rstack-artifacts-raghav.git
+#   git@github.com:raghavbadhwar/rstack-artifacts-raghav.git
+#   ssh://git@gitlab.com/raghavbadhwar/rstack-artifacts-raghav.git
 #   git@gitlab.example.org:team/gstack-artifacts-team.git
 #
 # Output: the requested form on stdout. Exits non-zero on parse failure with
