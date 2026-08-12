@@ -18,14 +18,20 @@ No claim is made that inherited gstack work was authored here. The preserved det
 
 ## How it fits together
 
+RStack's named specialists are **skill personas**, not a standing team of autonomous agents. The grouped map below includes the documented roster while keeping the operating flow readable.
+
 ```mermaid
-flowchart LR
-  U["Builder"] --> S["Skill workflow"]
-  S --> T["Local tools and browser"]
-  T --> E["Tests, screenshots, or reports"]
+flowchart TB
+  U["Builder"] --> D["Discovery and planning<br/>RStack Office Hours · CEO / Founder · Eng Manager<br/>Senior Designer · Developer Experience Lead · Design Partner"]
+  D --> B["Build and review<br/>Staff Engineer · Debugger · Designer Who Codes<br/>DX Tester · Design Explorer · Design Engineer"]
+  B --> Q["Quality and release<br/>QA Lead · QA Reporter · Chief Security Officer<br/>Release Engineer /ship · Release Engineer /land-and-deploy<br/>SRE · Performance Engineer"]
+  R["Research and runtime<br/>Adaptive Web Extractor · Internet Research Router<br/>Multi-Agent Coordinator · QA Engineer · Session Manager · GStack Browser"] --> B
+  Q --> M["Documentation and learning<br/>Technical Writer · Documentation Author · Eng Manager /retro<br/>Memory · Publisher · Diagram Maker"]
+  C["Control and platform<br/>Review Pipeline · Spec Author · Second Opinion<br/>Safety Guardrails · Edit Lock · Full Safety · Unlock<br/>Deploy Configurator · GBrain Onboarding · Keep Brain Current<br/>Self-Updater · iOS Live-Device QA · iOS Fix / Design / Clean / Sync"] -.->|"gates every stage"| D
+  C -.-> B
+  C -.-> Q
+  M --> E["Tests, screenshots, reports, and release evidence"]
   E --> U
-  S --> A["Approval boundary"]
-  A --> T
 ```
 
 ## Quick start
