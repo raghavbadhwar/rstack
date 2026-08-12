@@ -1,0 +1,28 @@
+# Reviewed fixtures used to test redaction, authentication, and security scanners.
+browse/test/commands.test.ts:generic-api-key:573
+browse/test/fixtures/security-bench-haiku-responses.json:jwt-base64:14104
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:1077
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:11351
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:12755
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:14104
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:2965
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:6855
+browse/test/fixtures/security-bench-haiku-responses.json:jwt:7629
+browse/test/terminal-agent-integration.test.ts:generic-api-key:210
+browse/test/terminal-agent-integration.test.ts:generic-api-key:236
+lib/diagram-render/dist/diagram-render.html:gcp-api-key:4550
+lib/diagram-render/dist/diagram-render.html:generic-api-key:578
+lib/redact-patterns.ts:private-key:260
+# Public anon key; RLS denies direct access and service credentials stay server-side.
+supabase/config.sh:generic-api-key:8
+test/brain-sync.test.ts:aws-access-token:288
+test/brain-sync.test.ts:generic-api-key:291
+test/brain-sync.test.ts:github-pat:289
+test/brain-sync.test.ts:github-pat:322
+test/brain-sync.test.ts:jwt:293
+test/redact-engine.test.ts:curl-auth-header:141
+test/redact-engine.test.ts:generic-api-key:132
+test/redact-engine.test.ts:generic-api-key:32
+test/redact-engine.test.ts:generic-api-key:394
+test/skill-e2e-cso.test.ts:generic-api-key:45
+test/telemetry.test.ts:generic-api-key:277
